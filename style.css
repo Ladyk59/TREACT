@@ -662,11 +662,147 @@ PRICING ↓
 
 */
 
-
 #pricing .row {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pricing__title {
+    max-width: 960px;
+}
+
+.pricing__para {
+    max-width: 760px;
+}
+
+.plans {
+    width: 100%;
+    margin-top: 64px;
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.plan {
+    width: calc(100% / 3);
+    max-width: 384px;
+    border: 1px solid rgb(229, 231, 235);
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.plan__stripe {
+    height: 8px;
+}
+
+.plan--personal .plan__stripe {
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+}
+
+.plan--business .plan__stripe {
+    background: linear-gradient(115deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
+}
+
+.plan--enterprise .plan__stripe {
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+}
+
+.plan__top,
+.plan__middle,
+.plan__bottom {
+    padding: 32px;
+}
+
+.plan__top {
+    border-bottom: 2px solid rgb(229, 231, 235);
+}
+
+.plan__name,
+.plan__duration {
+    letter-spacing: 0.08em;
+    font-weight: 700;
+}
+
+.plan__name {
+    font-size: 20px;
+}
+
+.plan__price {
+    font-size: 60px;
+    margin: 16px 0;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.plan__duration {
+    font-size: 20px;
+    color: #a0aec0;
+}
+
+.plan__middle {
+    border-bottom: 2px solid rgb(229, 231, 235);
+    flex: 1;
+}
+
+.plan__target {
+    font-size: 34px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.plan__feature {
+    font-size: 20px;
+    color: #718096;
+    margin-top: 20px;
+}
+
+.plan__button {
+    border: none;
+    border-radius: 9999px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 16px 48px;
+    cursor: pointer;
+}
+
+.plan--personal .plan__button {
+    color: #f7fafc;
+    background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+}
+
+.plan--business {
+    background: linear-gradient(135deg, rgb(76, 81, 191) 0%, rgb(102, 126, 234) 100%);
+}
+
+.plan--business .plan__top,
+.plan--business .plan__middle,
+.plan--business .plan__bottom {
+    border-color: rgba(102, 126, 234, 0.6);
+}
+
+.plan--business .plan__name,
+.plan--business .plan__price,
+.plan--business .plan__duration,
+.plan--business .plan__target,
+.plan--business .plan__feature {
+    color: #f7fafc;
+}
+
+.plan--business .plan__button {
+    color: #6415ff;
+    background: #f7fafc;
+}
+
+.plan--enterprise .plan__button {
+    color: #f7fafc;
+    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
 }
 
 /* 
@@ -750,6 +886,14 @@ MOBILE RESPONSIVENESS ↓
     }
     #pricing .row {
         margin-top: 40px;
+    }
+    .plans {
+        flex-direction: column;
+        align-items: center;
+    }
+    .plan {
+        width: 100%;
+        max-width: 460px;
     }
     .values__description,
     .values__img--wrapper {
